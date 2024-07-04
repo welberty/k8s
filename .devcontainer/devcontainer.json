@@ -1,0 +1,19 @@
+{
+    "name": "Kubernetes with Kind",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+        "--privileged"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "kind create cluster",
+    "forwardPorts": [
+        8080
+    ],
+    "extensions": [
+        "ms-kubernetes-tools.vscode-kubernetes-tools"
+    ]
+}
